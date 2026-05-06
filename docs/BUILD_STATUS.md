@@ -18,9 +18,9 @@
 
 | ID | Required Mechanism | Source Path | Unit / Semantic Test | Status |
 |---|---|---|---|---|
-| I01 | Versioned field/grid/time/unit contracts and strict validation | `src/isopleth/data/contracts.py` | `tests/test_contracts.py` | pending |
-| I02 | Immutable trajectory manifests and split auditing | `src/isopleth/data/manifests.py` | `tests/test_manifests.py` | pending |
-| I03 | Bounded PDEBench and The Well acquisition adapters | `src/isopleth/data/adapters.py` | `tests/test_adapters.py` | pending |
+| I01 | Versioned field/grid/time/unit contracts and strict validation | `src/isopleth/data/contracts.py` | `tests/test_contracts.py` | passed |
+| I02 | Immutable trajectory manifests and split auditing | `src/isopleth/data/manifests.py` | `tests/test_manifests.py` | passed |
+| I03 | Bounded PDEBench and The Well acquisition adapters | `src/isopleth/data/adapters.py` | `tests/test_adapters.py` | passed |
 | I04 | Original conservative Burgers reference solver | `src/isopleth/numerics/burgers.py` | `tests/test_burgers.py` | pending |
 | I05 | Original shallow-water solver with positivity/CFL | `src/isopleth/numerics/shallow_water.py` | `tests/test_shallow_water.py` | pending |
 | I06 | Independently checked manufactured and analytic solutions | `src/isopleth/numerics/verification.py` | `tests/test_mms.py` | pending |
