@@ -25,13 +25,13 @@
 | I05 | Original shallow-water solver with positivity/CFL | `src/isopleth/numerics/shallow_water.py` | `tests/test_shallow_water.py` | passed |
 | I06 | Independently checked manufactured and analytic solutions | `src/isopleth/numerics/verification.py` | `tests/test_mms.py` | passed |
 | I07 | Cell/face operators and conservative resolution transforms | `src/isopleth/numerics/transforms.py` | `tests/test_transforms.py` | passed |
-| I08 | Original Fourier neural operator baseline | `src/isopleth/models/fno.py` | `tests/test_fno.py` | pending |
-| I09 | Original convolutional U-Net baseline | `src/isopleth/models/unet.py` | `tests/test_unet.py` | pending |
-| I10 | Original multiscale learned face-flux operator | `src/isopleth/models/flux_operator.py` | `tests/test_flux_operator.py` | pending |
-| I11 | Antisymmetric/shared interface flux and boundary accounting | `src/isopleth/models/interfaces.py` | `tests/test_interfaces.py` | pending |
+| I08 | Original Fourier neural operator baseline | `src/isopleth/models/fno.py` | `tests/test_fno.py` | passed |
+| I09 | Original convolutional U-Net baseline | `src/isopleth/models/unet.py` | `tests/test_unet.py` | passed |
+| I10 | Original multiscale learned face-flux operator | `src/isopleth/models/flux_operator.py` | `tests/test_flux_operator.py` | passed |
+| I11 | Antisymmetric/shared interface flux and boundary accounting | `src/isopleth/models/interfaces.py` | `tests/test_interfaces.py` | passed |
 | I12 | Explicit reaction/source integration and balance audits | `src/isopleth/numerics/sources.py` | `tests/test_sources.py` | passed |
 | I13 | Differentiable conservative depth limiter and diagnostics | `src/isopleth/numerics/limiters.py` | `tests/test_limiters.py` | passed |
-| I14 | Parameter and physical lead-time conditioning | `src/isopleth/models/conditioning.py` | `tests/test_conditioning.py` | pending |
+| I14 | Parameter and physical lead-time conditioning | `src/isopleth/models/conditioning.py` | `tests/test_conditioning.py` | passed |
 | I15 | Real original multi-horizon training with validation selection | `src/isopleth/training/trainer.py` | `tests/test_trainer.py` | pending |
 | I16 | Autoregressive rollout without target feedback | `src/isopleth/rollout/runner.py` | `tests/test_rollout.py` | pending |
 | I17 | Cross-resolution inference with physical grid measures | `src/isopleth/rollout/cross_resolution.py` | `tests/test_cross_res.py` | pending |
