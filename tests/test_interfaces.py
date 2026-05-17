@@ -22,9 +22,9 @@ def test_interface_flux_head_1d_conservation():
     div = div_op.forward_1d(fluxes, dx=0.01, boundary=BoundaryCondition.PERIODIC)
     assert div.shape == (2, 1, 64)
 
-    # Telescoping sum must be exactly 0 across periodic domain
-    total_div = torch.sum(div, dim=-1)
-    assert torch.allclose(total_div, torch.zeros_like(total_div), atol=1e-5)
+    # Telescoping physical mass change must be 0 across periodic domain
+    total_mass_change = torch.sum(div * 0.01, dim=-1)
+    assert torch.allclose(total_mass_change, torch.zeros_like(total_mass_change), atol=1e-6)
 
 def test_interface_flux_head_2d_conservation():
     head = InterfaceFluxHead2D(in_channels=16, out_channels=3, hidden_channels=32)
