@@ -33,11 +33,11 @@
 | I13 | Differentiable conservative depth limiter and diagnostics | `src/isopleth/numerics/limiters.py` | `tests/test_limiters.py` | passed |
 | I14 | Parameter and physical lead-time conditioning | `src/isopleth/models/conditioning.py` | `tests/test_conditioning.py` | passed |
 | I15 | Real original multi-horizon training with validation selection | `src/isopleth/training/trainer.py` | `tests/test_trainer.py` | passed |
-| I16 | Autoregressive rollout without target feedback | `src/isopleth/rollout/runner.py` | `tests/test_rollout.py` | pending |
-| I17 | Cross-resolution inference with physical grid measures | `src/isopleth/rollout/cross_resolution.py` | `tests/test_cross_res.py` | pending |
-| I18 | Parameter and initial-condition shift experiments | `src/isopleth/evaluation/shifts.py` | `tests/test_shifts.py` | pending |
+| I16 | Autoregressive rollout without target feedback | `src/isopleth/rollout/runner.py` | `tests/test_rollout.py` | passed |
+| I17 | Cross-resolution inference with physical grid measures | `src/isopleth/rollout/cross_resolution.py` | `tests/test_cross_res.py` | passed |
+| I18 | Parameter and initial-condition shift experiments | `src/isopleth/evaluation/shifts.py` | `tests/test_shifts.py` | passed |
 | I19 | Trajectory ensembles and held-out calibration | `src/isopleth/uncertainty/calibration.py` | `tests/test_calibration.py` | pending |
-| I20 | Spatial/spectral/conservation/stability metrics | `src/isopleth/evaluation/metrics.py` | `tests/test_metrics.py` | pending |
+| I20 | Spatial/spectral/conservation/stability metrics | `src/isopleth/evaluation/metrics.py` | `tests/test_metrics.py` | passed |
 | I21 | Sparse observation operators and noise contracts | `src/isopleth/inverse/observations.py` | `tests/test_observations.py` | pending |
 | I22 | Original differentiable inverse reconstruction | `src/isopleth/inverse/reconstruction.py` | `tests/test_inverse.py` | pending |
 | I23 | Solver-based inverse and trivial-prior baselines | `src/isopleth/inverse/baselines.py` | `tests/test_inverse_baselines.py` | pending |

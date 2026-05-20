@@ -30,7 +30,7 @@ class InterfaceFluxHead1D(nn.Module):
             nn.GELU(),
             nn.Conv1d(hidden_channels, hidden_channels, kernel_size=1),
             nn.GELU(),
-            nn.Conv1d(hidden_channels, out_channels, kernel_size=1),
+            nn.Conv1d(hidden_channels, out_channels, kernel_size=1, bias=False),
         )
 
     def forward(
@@ -75,14 +75,14 @@ class InterfaceFluxHead2D(nn.Module):
             nn.GELU(),
             nn.Conv2d(hidden_channels, hidden_channels, kernel_size=1),
             nn.GELU(),
-            nn.Conv2d(hidden_channels, out_channels, kernel_size=1),
+            nn.Conv2d(hidden_channels, out_channels, kernel_size=1, bias=False),
         )
         self.flux_y_net = nn.Sequential(
             nn.Conv2d(2 * in_channels, hidden_channels, kernel_size=1),
             nn.GELU(),
             nn.Conv2d(hidden_channels, hidden_channels, kernel_size=1),
             nn.GELU(),
-            nn.Conv2d(hidden_channels, out_channels, kernel_size=1),
+            nn.Conv2d(hidden_channels, out_channels, kernel_size=1, bias=False),
         )
 
     def forward(
