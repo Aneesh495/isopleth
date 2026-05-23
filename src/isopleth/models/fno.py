@@ -245,3 +245,7 @@ class FNO2D(nn.Module):
 
         out = self.projection(h.permute(0, 2, 3, 1)).permute(0, 3, 1, 2)
         return out
+
+
+FourierNeuralOperator1D = FNO1D
+FourierNeuralOperator2D = FNO2D

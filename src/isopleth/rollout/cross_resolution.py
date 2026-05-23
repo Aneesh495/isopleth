@@ -143,3 +143,6 @@ class CrossResolutionEvaluator:
             fine_steps_completed=rollout.completed_steps,
             is_stable=rollout.is_stable,
         )
+
+
+CrossResolutionTransferEngine = CrossResolutionEvaluator

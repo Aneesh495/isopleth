@@ -131,3 +131,6 @@ class ShiftExperimentSuite:
             is_stable=m_shift.is_stable,
             mass_conservation_residual=m_shift.mass_conservation_residual,
         )
+
+
+DistributionShiftEvaluator = ShiftExperimentSuite

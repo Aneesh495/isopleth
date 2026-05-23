@@ -113,3 +113,6 @@ class ConformalTrajectoryCalibrator:
             n_test_samples=n_eval,
             is_valid_exchangeable=True,
         )
+
+
+ConformalCalibrator = ConformalTrajectoryCalibrator
