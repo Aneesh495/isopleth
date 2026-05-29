@@ -12,6 +12,18 @@ license = { text = "MIT" }
 authors = [
     { name = "Aneesh Krishna", email = "aneesh@example.com" }
 ]
+keywords = [
+    "neural-operators",
+    "scientific-machine-learning",
+    "physics-informed-machine-learning",
+    "conservation-laws",
+    "finite-volume",
+    "fourier-neural-operator",
+    "partial-differential-equations",
+    "inverse-problems",
+    "shallow-water-equations",
+    "pytorch",
+]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
