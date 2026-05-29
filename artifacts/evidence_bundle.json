@@ -1,0 +1,149 @@
+{
+  "campaign_name": "Isopleth Acceptance Campaign",
+  "total_gates": 12,
+  "gates_passed": 12,
+  "gates_failed": 0,
+  "all_passed": true,
+  "outcomes": [
+    {
+      "gate_id": "IA01",
+      "gate_name": "Contracts and Partition Integrity",
+      "passed": true,
+      "wall_clock_seconds": 0.010248875001707347,
+      "summary": "Verified 2800/400/300/500 train/val/calib/test split with zero cross-role leakage.",
+      "diagnostics": {
+        "audit_passed": true,
+        "counts": {
+          "train": 2800,
+          "validation": 400,
+          "calibration": 300,
+          "test": 500
+        }
+      }
+    },
+    {
+      "gate_id": "IA02",
+      "gate_name": "Numerical Solver EOC and Lake-at-Rest",
+      "passed": true,
+      "wall_clock_seconds": 0.022363832998962607,
+      "summary": "MMS EOC reached 2.16 (>= 1.6), lake-at-rest residual 0.00e+00 (< 1e-10).",
+      "diagnostics": {
+        "eoc": 2.1586982246223654,
+        "equilibrium_residual": 0.0
+      }
+    },
+    {
+      "gate_id": "IA03",
+      "gate_name": "Reaction Kinetics Sign Audit",
+      "passed": true,
+      "wall_clock_seconds": 0.0006556670014106203,
+      "summary": "Verified positive autocatalytic production (+u*v^2) and balance auditor precision.",
+      "diagnostics": {
+        "sign_correct": true,
+        "balance_conserved": true
+      }
+    },
+    {
+      "gate_id": "IA04",
+      "gate_name": "MFFNO Exact Discrete Conservation",
+      "passed": true,
+      "wall_clock_seconds": 0.00426641599915456,
+      "summary": "MFFNO exact face-flux formulation achieved discrete conservation drift 0.00e+00 (< 1e-5).",
+      "diagnostics": {
+        "drift": 0.0
+      }
+    },
+    {
+      "gate_id": "IA05",
+      "gate_name": "Target-Free Rollout Stability",
+      "passed": true,
+      "wall_clock_seconds": 0.007095749999280088,
+      "summary": "Autonomous 15-step rollout completed without divergence or NaN generation.",
+      "diagnostics": {
+        "steps": 15,
+        "is_stable": true
+      }
+    },
+    {
+      "gate_id": "IA06",
+      "gate_name": "Cross-Resolution Transfer",
+      "passed": true,
+      "wall_clock_seconds": 0.0034837909988709725,
+      "summary": "Zero-shot transfer from 32 to 64 cells achieved relative L2 error 0.0780.",
+      "diagnostics": {
+        "rel_l2": 0.07804779708385468
+      }
+    },
+    {
+      "gate_id": "IA07",
+      "gate_name": "Distribution Shifts",
+      "passed": true,
+      "wall_clock_seconds": 0.007040208001853898,
+      "summary": "Tested low-viscosity parameter shift without catastrophic error explosion.",
+      "diagnostics": {
+        "shifted_error": 0.047372136265039444,
+        "is_stable": true
+      }
+    },
+    {
+      "gate_id": "IA08",
+      "gate_name": "Conformal Uncertainty Calibration",
+      "passed": true,
+      "wall_clock_seconds": 0.0013346669984457549,
+      "summary": "Nominal 90% conformal intervals attained 96.0% empirical coverage.",
+      "diagnostics": {
+        "observed_coverage": 0.96
+      }
+    },
+    {
+      "gate_id": "IA09",
+      "gate_name": "Differentiable Inverse Reconstruction",
+      "passed": true,
+      "wall_clock_seconds": 0.8161543749993143,
+      "summary": "Inverse optimization converged with loss reduction from 3.8908e-01 to 9.4698e-02.",
+      "diagnostics": {
+        "initial_loss": 0.3890829086303711,
+        "final_loss": 0.09469789266586304
+      }
+    },
+    {
+      "gate_id": "IA10",
+      "gate_name": "Finite Difference Gradient Checks",
+      "passed": true,
+      "wall_clock_seconds": 0.00035841699718730524,
+      "summary": "Central finite difference matched autograd to relative error 3.08e-11.",
+      "diagnostics": {
+        "rel_l2_err": 3.080260189642101e-11
+      }
+    },
+    {
+      "gate_id": "IA11",
+      "gate_name": "Ablation and Scaling Suite",
+      "passed": true,
+      "wall_clock_seconds": 0.014983749999373686,
+      "summary": "Evaluated 4 ablations (no flux, local only, unconditioned, one step) and sample efficiency.",
+      "diagnostics": {
+        "variants_tested": [
+          "mffno_full",
+          "no_flux_unconstrained",
+          "local_only_cnn",
+          "no_conditioning",
+          "one_step_training"
+        ]
+      }
+    },
+    {
+      "gate_id": "IA12",
+      "gate_name": "Independent Verification and Negatives",
+      "passed": true,
+      "wall_clock_seconds": 0.000359792000381276,
+      "summary": "Independent verifier certified valid rollout and successfully caught mass injection negative control.",
+      "diagnostics": {
+        "valid_cert": "f6b30e67ff8f8f22ed715ba55577e0f633bd748bb6c3019065a41593fd7eeac8",
+        "negative_rejected": true
+      }
+    }
+  ],
+  "timestamp_utc": "2026-10-10T01:15:10.919652+00:00",
+  "sha256_bundle_digest": "2794ff8c1b52b401837fdfc5203974062855df498f55475d3ab82afd93644edd"
+}

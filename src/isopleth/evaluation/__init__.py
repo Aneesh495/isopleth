@@ -1,4 +1,4 @@
-"""Evaluation suites, metrics, shift benchmarks, ablations, and acceptance campaign."""
+"""Evaluation suites, metrics, shift benchmarks, diagnostics, testing, and acceptance campaign."""
 
 from isopleth.evaluation.ablations import (
     AblationExperimentSuite,
@@ -18,6 +18,16 @@ from isopleth.evaluation.benchmarks import (
     NeuralOperatorBenchmarkSuite,
     ResolutionBenchmarkPoint,
 )
+from isopleth.evaluation.diagnostics import (
+    ConservationDriftPowerSpectrum,
+    DriftPowerSpectrumMetrics,
+    HessianDistortionReport,
+    SpectralDissipationAnalyzer,
+    SpectralDissipationMetrics,
+    StatisticalComparisonReport,
+    StatisticalHypothesisTester,
+    SurrogateHessianDistortionAnalyzer,
+)
 from isopleth.evaluation.independent_check import (
     IndependentTrajectoryVerifier,
     IndependentVerificationResult,
@@ -31,25 +41,45 @@ from isopleth.evaluation.shifts import (
     ShiftExperimentReport,
     ShiftExperimentSuite,
 )
+from isopleth.evaluation.statistical_testing import (
+    BootstrapMetricEstimator,
+    MultiModelRankReport,
+    MultiModelStatisticalRanker,
+    PairwiseEquivalenceTester,
+    PermutationSignificanceTester,
+)
 
 __all__ = [
     "AblationExperimentSuite",
     "AblationMetrics",
     "AblationStudySummary",
     "AblationVariant",
-    "SampleEfficiencyPoint",
     "AcceptanceCampaignReport",
     "AcceptanceCampaignRunner",
-    "GateExecutionOutcome",
     "BenchmarkSuiteReport",
-    "MatchedAccuracyComparison",
-    "NeuralOperatorBenchmarkSuite",
-    "ResolutionBenchmarkPoint",
+    "BootstrapMetricEstimator",
+    "ConservationDriftPowerSpectrum",
+    "DistributionShiftEvaluator",
+    "DriftPowerSpectrumMetrics",
+    "EvaluationMetrics",
+    "GateExecutionOutcome",
+    "HessianDistortionReport",
     "IndependentTrajectoryVerifier",
     "IndependentVerificationResult",
-    "EvaluationMetrics",
-    "TrajectoryEvaluator",
-    "DistributionShiftEvaluator",
+    "MatchedAccuracyComparison",
+    "MultiModelRankReport",
+    "MultiModelStatisticalRanker",
+    "NeuralOperatorBenchmarkSuite",
+    "PairwiseEquivalenceTester",
+    "PermutationSignificanceTester",
+    "ResolutionBenchmarkPoint",
+    "SampleEfficiencyPoint",
     "ShiftExperimentReport",
     "ShiftExperimentSuite",
+    "SpectralDissipationAnalyzer",
+    "SpectralDissipationMetrics",
+    "StatisticalComparisonReport",
+    "StatisticalHypothesisTester",
+    "SurrogateHessianDistortionAnalyzer",
+    "TrajectoryEvaluator",
 ]

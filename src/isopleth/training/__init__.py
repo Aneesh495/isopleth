@@ -1,4 +1,4 @@
-"""Training pipelines, losses, curricula, and checkpointing for Isopleth."""
+"""Training pipelines, losses, curricula, optimizers, and checkpointing for Isopleth."""
 
 from isopleth.training.checkpoints import (
     CheckpointManager,
@@ -12,6 +12,12 @@ from isopleth.training.losses import (
     LossComponents,
     PhysicalLoss,
 )
+from isopleth.training.optimizers import (
+    ConservationConstrainedOptimizer,
+    ProjectedGradientDescent,
+    SecondOrderLBFGSWrapper,
+    StochasticWeightAveragingPDE,
+)
 from isopleth.training.trainer import (
     MultiHorizonTrainer,
     TrainingHistory,
@@ -20,10 +26,14 @@ from isopleth.training.trainer import (
 __all__ = [
     "CheckpointManager",
     "CheckpointMetadata",
+    "ConservationConstrainedOptimizer",
     "CurriculumScheduler",
     "CurriculumStage",
     "LossComponents",
     "MultiHorizonTrainer",
     "PhysicalLoss",
+    "ProjectedGradientDescent",
+    "SecondOrderLBFGSWrapper",
+    "StochasticWeightAveragingPDE",
     "TrainingHistory",
 ]

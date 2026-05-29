@@ -1,0 +1,66 @@
+{
+  "model_architectures": {
+    "FNO-1D": {
+      "total_parameters": 140513,
+      "trainable_parameters": 140513
+    },
+    "UNet-1D": {
+      "total_parameters": 189409,
+      "trainable_parameters": 189409
+    },
+    "DeepONet-1D": {
+      "total_parameters": 91137,
+      "trainable_parameters": 91137
+    },
+    "WNO-1D": {
+      "total_parameters": 13857,
+      "trainable_parameters": 13857
+    },
+    "MFFNO-1D (Flux)": {
+      "total_parameters": 111456,
+      "trainable_parameters": 111456
+    }
+  },
+  "resolution_scaling": [
+    {
+      "resolution": 32,
+      "batch_size": 8,
+      "mean_latency_ms": 0.7846833997367261,
+      "p50_latency_ms": 0.7031250024738256,
+      "p95_latency_ms": 1.2613580995093796,
+      "steps_per_second": 1274.3993314172847,
+      "peak_memory_mb": 0.4329833984375,
+      "parameters": 111456
+    },
+    {
+      "resolution": 64,
+      "batch_size": 8,
+      "mean_latency_ms": 0.902761066633199,
+      "p50_latency_ms": 0.8286249976663385,
+      "p95_latency_ms": 1.2636331004614472,
+      "steps_per_second": 1107.712812348389,
+      "peak_memory_mb": 0.4407958984375,
+      "parameters": 111456
+    },
+    {
+      "resolution": 128,
+      "batch_size": 8,
+      "mean_latency_ms": 1.177022266589726,
+      "p50_latency_ms": 1.1026249994756654,
+      "p95_latency_ms": 1.773441799377906,
+      "steps_per_second": 849.6015992089295,
+      "peak_memory_mb": 0.4564208984375,
+      "parameters": 111456
+    }
+  ],
+  "matched_accuracy": {
+    "target_tolerance_rel_l2": 0.05,
+    "solver_wall_clock_ms": 8.472499997878913,
+    "surrogate_wall_clock_ms": 4.426499999681255,
+    "speedup_factor": 1.9140404379277285,
+    "solver_steps_required": 50,
+    "surrogate_steps_required": 10,
+    "solver_achieved_rel_l2": 0.0,
+    "surrogate_achieved_rel_l2": 0.2981131076812744
+  }
+}

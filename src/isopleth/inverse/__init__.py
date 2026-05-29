@@ -1,4 +1,4 @@
-"""Inverse problems, sparse sensor observation operators, and gradient diagnostics."""
+"""Inverse problems, sparse sensor observation operators, gradient diagnostics, and Bayesian MCMC."""
 
 from isopleth.inverse.baselines import (
     BaselineComparisonMetrics,
@@ -6,6 +6,12 @@ from isopleth.inverse.baselines import (
     PriorMeanBaseline,
     SpatialInterpolationBaseline,
     evaluate_reconstruction_accuracy,
+)
+from isopleth.inverse.bayesian_mcmc import (
+    BayesianSurrogateDistortionAnalyzer,
+    HMCSampleChain,
+    HamiltonianMonteCarloSampler,
+    SurrogatePosteriorDistortionReport,
 )
 from isopleth.inverse.gradient_checks import (
     FiniteDifferenceCheckResult,
@@ -24,18 +30,22 @@ from isopleth.inverse.reconstruction import (
 )
 
 __all__ = [
-    "ObservationRecord",
-    "SparseObservationOperator",
-    "InverseConfig",
-    "InverseReconstructionResult",
-    "DifferentiableInverseReconstructor",
     "BaselineComparisonMetrics",
-    "PriorMeanBaseline",
-    "SpatialInterpolationBaseline",
-    "NumericalSolverInverseBaseline",
-    "evaluate_reconstruction_accuracy",
+    "BayesianSurrogateDistortionAnalyzer",
+    "DifferentiableInverseReconstructor",
     "FiniteDifferenceCheckResult",
     "GradientVerificationSuite",
+    "HMCSampleChain",
+    "HamiltonianMonteCarloSampler",
+    "InverseConfig",
+    "InverseReconstructionResult",
+    "NumericalSolverInverseBaseline",
+    "ObservationRecord",
+    "PriorMeanBaseline",
+    "SparseObservationOperator",
+    "SpatialInterpolationBaseline",
     "SurrogateDistortionResult",
     "SurrogateGradientDistortionAnalyzer",
+    "SurrogatePosteriorDistortionReport",
+    "evaluate_reconstruction_accuracy",
 ]
